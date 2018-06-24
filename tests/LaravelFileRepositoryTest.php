@@ -13,7 +13,7 @@ use Nwidart\Modules\Module;
 class LaravelFileRepositoryTest extends BaseTestCase
 {
     /**
-     * @var LaravelFileRepository
+     * @var Repository
      */
     private $repository;
 
@@ -166,9 +166,7 @@ class LaravelFileRepositoryTest extends BaseTestCase
     {
         $this->repository->addLocation(__DIR__ . '/stubs/valid');
 
-        $this->repository->enable('Recipe');
-
-        $this->assertTrue($this->repository->isEnabled('Recipe'));
+        $this->assertTrue($this->repository->enabled('Recipe'));
     }
 
     /** @test */
@@ -176,9 +174,7 @@ class LaravelFileRepositoryTest extends BaseTestCase
     {
         $this->repository->addLocation(__DIR__ . '/stubs/valid');
 
-        $this->repository->isDisabled('Recipe');
-
-        $this->assertTrue($this->repository->isDisabled('Recipe'));
+        $this->assertFalse($this->repository->disabled('Recipe'));
     }
 
     /** @test */
@@ -210,7 +206,7 @@ class LaravelFileRepositoryTest extends BaseTestCase
 
         $this->repository->disable('Recipe');
 
-        $this->assertTrue($this->repository->isDisabled('Recipe'));
+        $this->assertTrue($this->repository->disabled('Recipe'));
     }
 
     /** @test */
@@ -220,7 +216,7 @@ class LaravelFileRepositoryTest extends BaseTestCase
 
         $this->repository->enable('Recipe');
 
-        $this->assertTrue($this->repository->isEnabled('Recipe'));
+        $this->assertTrue($this->repository->enabled('Recipe'));
     }
 
     /** @test */
