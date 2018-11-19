@@ -3,8 +3,8 @@
 if (! function_exists('module_path')) {
     function module_path($name, $path = '')
     {
-        $module = app('modules')->find($name);
         $name = ucfirst($name);
+        $module = app('modules')->find($name);
         $path = $path ? DIRECTORY_SEPARATOR . $path : $path;
 
         if ($module instanceof \Nwidart\Modules\Module) {
