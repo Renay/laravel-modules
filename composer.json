@@ -1,5 +1,5 @@
 {
-  "name": "nwidart/laravel-modules",
+  "name": "renay/laravel-modules",
   "description": "Laravel Module management",
   "keywords": [
     "modules",
@@ -9,6 +9,7 @@
     "rad"
   ],
   "license": "MIT",
+  "version": "4.0",
   "authors": [
     {
       "name": "Nicolas Widart",
