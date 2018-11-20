@@ -26,8 +26,8 @@ return [
         'enabled'      => false,
         'path'         => base_path() . '/vendor/renay/laravel-modules/src/Commands/stubs',
         'files'        => [
-            'routes/web'      => 'src/Routes/web.php',
-            'routes/api'      => 'src/Routes/api.php',
+            'routes/web'      => 'routes/web.php',
+            'routes/api'      => 'routes/api.php',
             'views/index'     => 'resources/views/index.blade.php',
             'views/master'    => 'resources/views/layouts/master.blade.php',
             'scaffold/config' => 'config/config.php',
